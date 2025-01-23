@@ -15,10 +15,10 @@ export default function Footer() {
 
           <div className="footer__subscribe">
             <a
-              href="mailto:expample@gmail.com"
+              href="tel:+74956971317"
               target="_blank"
               className="button button--flex footer__button"
-              title="Send email"
+              title="Call"
             >
               Записаться
               <img

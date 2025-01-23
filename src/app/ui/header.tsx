@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import Navigation from './navigation';
 import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const [showTheme, setShowTheme] = useState(false);
@@ -102,7 +103,7 @@ export default function Header() {
         </div>
       </div>
       <div className="nav container">
-        <div className="flex items-center nav__logo">
+        <Link href={'/'} className="flex items-center nav__logo">
           <div className="flex items-center justify-center md:w-12 nav__logo-icon">
             <Image
               className="hidden md:block"
@@ -114,7 +115,7 @@ export default function Header() {
             />
           </div>
           <div className="nav__logo">ГЕОТЭК КОЛЛЕДЖ</div>
-        </div>
+        </Link>
         <Navigation />
         <div className="nav__btns">
           <div className="nav__theme" onClick={toggleTheme}>
