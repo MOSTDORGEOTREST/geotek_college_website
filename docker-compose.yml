@@ -13,6 +13,7 @@ services:
     environment:
       - NODE_ENV=development
     command: ["sh", "-c", "npm install && npm run dev"]
+    restart: on-failure
 
   nginx:
     image: nginx:latest
@@ -25,6 +26,7 @@ services:
       # - ./cert:/etc/nginx/certs:ro # Папка для сертификатов (заготовка для будущего использования)
     depends_on:
       - app
+    restart: on-failure
 
 networks:
   default:
