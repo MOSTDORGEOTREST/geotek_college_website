@@ -30,7 +30,7 @@ export default function Home() {
     const date = new Date();
     date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
     expires = '; expires=' + date.toUTCString();
-    document.cookie = 'allowCookies=' + ('1' || '') + expires + '; path=/';
+    document.cookie = 'allowCookies=' + '1' + expires + '; path=/';
     setShowCookie(false);
   }
 
