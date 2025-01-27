@@ -15,10 +15,10 @@ export default function Home() {
   }, []);
 
   function getCookie() {
-    var nameEQ = 'allowCookies=';
-    var ca = document.cookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
+    const nameEQ = 'allowCookies=';
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
       while (c.charAt(0) === ' ') c = c.substring(1, c.length);
       if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
@@ -26,12 +26,11 @@ export default function Home() {
   }
 
   function acceptCookies() {
-    var expires = '';
-    var date = new Date();
+    let expires = '';
+    const date = new Date();
     date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
     expires = '; expires=' + date.toUTCString();
     document.cookie = 'allowCookies=' + ('1' || '') + expires + '; path=/';
-    console.log('123');
     setShowCookie(false);
   }
 
@@ -41,17 +40,17 @@ export default function Home() {
         <div className="container">
           <h2 className="section__title-center">
             Негосударственное образовательное частное учреждение дополнительного
-            профессионального образования <br /> “Геотэк-Колледж” (НОЧУ ДПО
-            "Геотэк-Колледж")
+            профессионального образования <br /> &quot;Геотэк-Колледж&quot;
+            (НОЧУ ДПО &quot;Геотэк-Колледж&quot;)
           </h2>
           <div className="section__block">
             <p>
-              НОЧУ ДПО "Геотэк-Колледж" – негосударственное образовательное
-              учреждение дополнительного профессионального образования,
-              основанное в 1996 году. Колледж обладает бессрочной лицензией
-              Департамента образования г. Москвы и является аккредитованным
-              экзаменационным центром Лондонской торгово-промышленной палаты
-              (LCCI).
+              НОЧУ ДПО &quot;Геотэк-Колледж&quot; – негосударственное
+              образовательное учреждение дополнительного профессионального
+              образования, основанное в 1996 году. Колледж обладает бессрочной
+              лицензией Департамента образования г. Москвы и является
+              аккредитованным экзаменационным центром Лондонской
+              торгово-промышленной палаты (LCCI).
             </p>
           </div>
         </div>

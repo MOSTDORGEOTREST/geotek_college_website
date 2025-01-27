@@ -10,7 +10,6 @@ export default function Header() {
   const [showTheme, setShowTheme] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const onScroll = useCallback(() => {
-    const { pageYOffset, scrollY } = window;
     // console.log('yOffset', pageYOffset, 'scrollY', scrollY);
     setScrollY(window.pageYOffset);
   }, []);
@@ -24,13 +23,9 @@ export default function Header() {
     };
   }, []);
 
-  const toggleNav = (e: any) => {
-    e.preventDefault();
-
+  const toggleNav = () => {
     const navMenu = document.getElementById('nav-menu'),
       navWrapper = document.getElementById('nav-wrapper');
-
-    console.log('toggleNav ', navMenu, navWrapper);
 
     if (!navMenu || !navWrapper) return;
 
@@ -38,29 +33,29 @@ export default function Header() {
     navMenu.classList.add('nav-show');
   };
 
-  const toggleTheme = (e: any) => {
+  const toggleTheme = () => {
     setShowTheme(!showTheme);
   };
 
-  const setContrast = (e: any) => {
+  const setContrast = () => {
     const contrastTheme = 'contrast-theme';
 
     document.body.classList['add'](contrastTheme);
   };
 
-  const setStandart = (e: any) => {
+  const setStandart = () => {
     const contrastTheme = 'contrast-theme';
 
     document.body.classList['remove'](contrastTheme);
   };
 
-  const setNormal = (e: any) => {
+  const setNormal = () => {
     const contrastTheme = 'big-theme';
 
     document.body.classList['remove'](contrastTheme);
   };
 
-  const setBig = (e: any) => {
+  const setBig = () => {
     const contrastTheme = 'big-theme';
 
     document.body.classList['add'](contrastTheme);

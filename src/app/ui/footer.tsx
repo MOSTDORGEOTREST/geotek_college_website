@@ -24,6 +24,7 @@ export default function Footer() {
               <img
                 className=" button__icon"
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJ1JREFUSEvt1MENwkAMRNE/nUAn0Ek6gU6ASmiFThxZyiHiwI4trcQhueSymhePVxGTH03O5wCGDf9PRRFxA16SPsPP3h2wJtjC70CGXyuIC5yAN5DvEmIBOXFEtBAb6CIloIN0gQdwyX1IOv+6VSVg24MdnrANdMJtoBteARYgqxl2/r2PSkWLpGflN2FPUA3dn7cn6CIHMGxuekUrkppAGZ45WkEAAAAASUVORK5CYII="
+                alt="Записаться"
               />
             </a>
           </div>

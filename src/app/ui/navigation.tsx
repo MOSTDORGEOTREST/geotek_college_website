@@ -7,9 +7,7 @@ import { pages } from '../lib/pages';
 function Navigation() {
   const pathname = usePathname();
 
-  const onClose = (e: any) => {
-    e.preventDefault();
-
+  const onClose = () => {
     const navMenu = document.getElementById('nav-menu'),
       navWrapper = document.getElementById('nav-wrapper');
 
