@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { pages } from '../lib/pages';
-import { MouseEventHandler } from 'react';
 
 function Navigation() {
   const pathname = usePathname();
@@ -32,6 +31,12 @@ function Navigation() {
     if (!item || !item.parentElement) return;
     const navItem = item.parentElement.parentElement;
     if (!navItem) return;
+
+    document.querySelectorAll('.nav__item.show-sub-nav').forEach((element) => {
+      if (element == navItem) return;
+      element.classList.remove('show-sub-nav');
+    });
+
     navItem.classList.toggle('show-sub-nav');
   };
 

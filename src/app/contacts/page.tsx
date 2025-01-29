@@ -13,7 +13,7 @@ export default function Page() {
           </div>
 
           <div className="section__block">
-            <h3>г. Москва м. Кропоткинская, Нащокинский пер. 12, стр. 2</h3>
+            <h3>Москва, м. Проспект Мира, пр. Мира, д. 68, стр. 1А</h3>
           </div>
 
           <div className="section__block">

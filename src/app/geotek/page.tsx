@@ -122,9 +122,12 @@ export default function Page() {
                   численного моделирования оснований зданий и сооружений
                 </h3>
               </div>
-              <p className="types__card-description">24 академических часа</p>
+              <p className="types__card-description">72 академических часа</p>
               <p className="types__card-description">Очная форма обучения</p>
               <p className="types__card-description">15 обучающихся</p>
+              <button className="button button--flex types__card-btn">
+                Подробнее
+              </button>
             </Link>
             <Link href="geotek/prog2" className="types__card">
               <div className="types__card-title-wrapper">
@@ -136,9 +139,12 @@ export default function Page() {
                   Программный комплекс PLAXIS
                 </h3>
               </div>
-              <p className="types__card-description">24 академических часа</p>
+              <p className="types__card-description">72 академических часа</p>
               <p className="types__card-description">Очная форма обучения</p>
               <p className="types__card-description">78 обучающихся</p>
+              <button className="button button--flex types__card-btn">
+                Подробнее
+              </button>
             </Link>
           </div>
         </div>

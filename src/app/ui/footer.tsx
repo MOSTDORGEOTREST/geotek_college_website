@@ -35,7 +35,7 @@ export default function Footer() {
 
           <ul className="footer__data">
             <li className="footer__information">
-              м. Кропоткинская, Нащокинский пер. 12, стр. 2
+              Москва, м. Проспект Мира, пр. Мира, д. 68, стр. 1А
             </li>
             <li className="footer__information">Москва, Россия</li>
           </ul>
