@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://geotekcollege.ru/sitemap.xml
