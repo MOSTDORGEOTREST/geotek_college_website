@@ -3,11 +3,21 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { pages } from '../lib/pages';
+import { MouseEventHandler } from 'react';
 
 function Navigation() {
   const pathname = usePathname();
 
-  const onClose = () => {
+  const onClose = (e: any) => {
+    e.stopPropagation();
+    e.preventDefault();
+
+    if (e.target !== e.currentTarget) return;
+
+    closeMenu();
+  };
+
+  const closeMenu = () => {
     const navMenu = document.getElementById('nav-menu'),
       navWrapper = document.getElementById('nav-wrapper');
 
@@ -15,6 +25,14 @@ function Navigation() {
 
     navMenu.classList.remove('nav-show');
     navWrapper.classList.remove('naw__wrapper-show');
+  };
+
+  const toggleSubNav = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const item = e.currentTarget;
+    if (!item || !item.parentElement) return;
+    const navItem = item.parentElement.parentElement;
+    if (!navItem) return;
+    navItem.classList.toggle('show-sub-nav');
   };
 
   return (
@@ -30,13 +48,18 @@ function Navigation() {
                 }
               >
                 <div className="nav__item_expandable">
-                  <Link className={'nav__link'} href={page.path}>
+                  <Link
+                    className={'nav__link'}
+                    href={page.path}
+                    onClick={closeMenu}
+                  >
                     {page.title}
                   </Link>
                   <button
                     data-spoller
                     type="button"
                     className="button--flex button--nav"
+                    onClick={toggleSubNav}
                   >
                     <svg
                       className="button__icon_nav"
@@ -58,6 +81,7 @@ function Navigation() {
                         <Link
                           className="nav__link nav__link_sub"
                           href={sub.path}
+                          onClick={closeMenu}
                         >
                           {sub.title}
                         </Link>
@@ -73,12 +97,14 @@ function Navigation() {
                   pathname == page.path ? 'nav__link active-link' : 'nav__link'
                 }
               >
-                <Link href={page.path}>{page.title}</Link>
+                <Link href={page.path} onClick={closeMenu}>
+                  {page.title}
+                </Link>
               </li>
             );
           })}
         </ul>
-        <div className="nav__close" id="nav-close" onClick={onClose}>
+        <button className="nav__close" id="nav-close" onClick={closeMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -88,7 +114,7 @@ function Navigation() {
           >
             <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path>
           </svg>
-        </div>
+        </button>
       </div>
     </div>
   );

@@ -1025,9 +1025,9 @@ img {
     width: 375px;
     max-width: 40vw;
 
-    left: unset;
+    /* left: unset;
     right: 5.25rem;
-    transform: translate(-00%, 0);
+    transform: translate(-00%, 0); */
   }
 
   .cookies__info div {
@@ -1053,9 +1053,9 @@ img {
 
     width: 375px;
     /* max-width: 40vw; */
-    left: 160px;
+    /* left: 160px;
     right: unset;
-    transform: translate(-0%, 0);
+    transform: translate(-0%, 0); */
   }
   .cookies__info div {
     text-align: center;
