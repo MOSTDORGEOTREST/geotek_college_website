@@ -591,73 +591,13 @@ img {
   display: inline-flex;
   column-gap: 0.5rem;
   font-size: var(--small-font-size);
+  align-items: center;
 }
 
 .about__details-icon {
   font-size: 1rem;
   color: var(--first-color);
   margin-top: 0.15rem;
-}
-
-/* ===================== TYPES ===================== */
-.types__bg {
-  background-color: var(--first-color);
-  padding: 3rem 2rem 2rem;
-  border-radius: 1rem;
-}
-
-.types__container {
-  gap: 2rem;
-  padding-top: 1rem;
-}
-
-.types__title {
-  color: #fff;
-}
-
-.types__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: var(--mb-0-5);
-
-  background-color: var(--container-color);
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
-  border-radius: 1rem;
-}
-
-.types__card-number {
-  display: inline-block;
-  background-color: var(--first-color-alt);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-size: var(--h2-font-size);
-  margin-bottom: var(--mb-2-5);
-  transition: 0.3s;
-  height: fit-content;
-  width: fit-content;
-}
-
-.types__card-title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
-.types__card-description {
-  font-size: var(--small-font-size);
-}
-
-.button.button--flex.types__card-btn {
-  margin-top: 2rem;
-  background-color: var(--first-color-alt);
-  width: 100%;
-  color: var(--body-color);
-  justify-content: center;
-}
-
-.types__card:hover .types__card-number {
-  transform: translateY(-0.25rem);
 }
 
 /* ===================== fileS ===================== */
@@ -1126,26 +1066,10 @@ img {
   .home__title {
     font-size: var(--h1-font-size);
   }
-
-  .types__bg {
-    padding: 2rem 1rem;
-  }
-
-  .types__card {
-    padding: 1.5rem;
-  }
 }
 
 /* medium */
 @media screen and (min-width: 1000px) {
-  .types__container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .types__card {
-    min-height: 400px;
-  }
-
   .files__description {
     padding: 0 4rem;
   }
@@ -1270,23 +1194,6 @@ img {
 
   .about__img {
     width: 430px;
-  }
-
-  .types__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .types__bg {
-    padding: 3.5rem 2.5rem;
-  }
-
-  .types__card-title-wrapper {
-    display: flex;
-    gap: var(--mb-1);
-  }
-
-  .types__card-title {
-    font-size: var(--h3-font-size);
   }
 
   .files__description {

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import styles from './styles.module.css';
 
 export default function Page() {
   const toggleItem = (item: any) => {
@@ -106,43 +107,54 @@ export default function Page() {
       </div>
 
       {/* <!-- ===================== TYPES ===================== --> */}
-      <div className="types section container" id="types">
-        <div className="types__bg">
-          <h2 className="section__title-center types__title">
+      <div className={`types section container`} id="types">
+        <div className={styles.types__bg}>
+          <h2 className={`section__title-center ${styles.types__title}`}>
             Типы дополнительных образовательных программ
           </h2>
 
-          <div className="types__container grid">
-            <Link href="geotek/prog1" className="types__card">
-              <div className="types__card-title-wrapper">
-                {/* <div className="types__card-number">1</div> */}
-                <h3 className="types__card-title">
+          <div className={`${styles.types__container} grid`}>
+            <Link href="geotek/prog1" className={styles.types__card}>
+              <div className={styles.types__card_title__wrapper}>
+                <h3 className={styles.types__card_title}>
                   Технология лабораторных определений параметров нелинейных
                   моделей грунтов, используемых в программных комплексах
                   численного моделирования оснований зданий и сооружений
                 </h3>
               </div>
-              <p className="types__card-description">72 академических часа</p>
-              <p className="types__card-description">Очная форма обучения</p>
-              <p className="types__card-description">15 обучающихся</p>
-              <button className="button button--flex types__card-btn">
+              <p className={styles.types__card_description}>
+                72 академических часа
+              </p>
+              <p className={styles.types__card_description}>
+                Очная форма обучения
+              </p>
+              <p className={styles.types__card_description}>15 обучающихся</p>
+              <button
+                className={`button button--flex ${styles.types__card_btn}`}
+              >
                 Подробнее
               </button>
             </Link>
-            <Link href="geotek/prog2" className="types__card">
-              <div className="types__card-title-wrapper">
+            <Link href="geotek/prog2" className={styles.types__card}>
+              <div className={styles.types__card_title__wrapper}>
                 {/* <div className="types__card-number">1</div> */}
-                <h3 className="types__card-title">
+                <h3 className={styles.types__card_title}>
                   Теоретические основы и практическая методика лабораторных
                   определений входных параметров расчетных моделей программных
                   комплексов, основанных на методе конечных элементов (МКЭ).
                   Программный комплекс PLAXIS
                 </h3>
               </div>
-              <p className="types__card-description">72 академических часа</p>
-              <p className="types__card-description">Очная форма обучения</p>
-              <p className="types__card-description">78 обучающихся</p>
-              <button className="button button--flex types__card-btn">
+              <p className={styles.types__card_description}>
+                72 академических часа
+              </p>
+              <p className={styles.types__card_description}>
+                Очная форма обучения
+              </p>
+              <p className={styles.types__card_description}>78 обучающихся</p>
+              <button
+                className={`button button--flex ${styles.types__card_btn}`}
+              >
                 Подробнее
               </button>
             </Link>
