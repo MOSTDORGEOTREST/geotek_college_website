@@ -22,7 +22,7 @@ export default function Page() {
         {/*  */}
         <div className="section__block">
           <h3>Центр находится по адресу</h3>
-          <p>Москва, м. Проспект Мира, пр. Мира, д. 68, стр. 1А</p>
+          <p>Москва, м. Кропоткинская, Нащокинский пер. 12, стр. 2</p>
         </div>
         {/*  */}
         <div className="section__block">
