@@ -68,5 +68,5 @@ docker-compose up --force-recreate --build -d
 ## Развертывание на Vercel
 Самый простой способ развернуть ваше приложение Next.js - использовать [Платформу Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) от создателей Next.js.
 Ознакомьтесь с  [документацией по развертыванию Next.js](https://nextjs.org/docs/app/building-your-application/deploying) для получения дополнительной информации.
-```
+
 
