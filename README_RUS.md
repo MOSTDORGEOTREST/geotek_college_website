@@ -38,11 +38,11 @@ bun dev
 ```bash
 npm install && npm run build && npm run start
 # или
-yarn install && yarn build && yarn start
+yarn && yarn build && yarn start
 # или
-pnpm install && pnpm build && pnpm start
+pnpm && pnpm build && pnpm start
 # или
-bun install && bun build && bun start
+bun install && bun run build && bun start
 ```
 
 ### Docker развёртывание

@@ -38,12 +38,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 To build and run the production version without Docker:
 ```bash
 npm install && npm run build && npm run start
-# или
-yarn install && yarn build && yarn start
-# или
-pnpm install && pnpm build && pnpm start
-# или
-bun install && bun build && bun start
+# or
+yarn && yarn build && yarn start
+# or
+pnpm && pnpm build && pnpm start
+# or
+bun install && bun run build && bun start
 ```
 
 ### Docker Deployment
