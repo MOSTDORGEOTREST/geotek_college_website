@@ -1,4 +1,12 @@
+
+import { useContext } from "react"
+import CONTACTS from "../lib/contacts.json"
+import Context from "../context"
+
 export default function Page() {
+  const context = useContext(Context)
+  const lan: 'ru'|'en' = context.lan
+
   return (
     <div className="section">
       <div className="container">
@@ -22,7 +30,7 @@ export default function Page() {
         {/*  */}
         <div className="section__block">
           <h3>Центр находится по адресу</h3>
-          <p>Москва, м. Кропоткинская, Нащокинский пер. 12, стр. 2</p>
+          <p>{CONTACTS[lan].address}</p>
         </div>
         {/*  */}
         <div className="section__block">
@@ -196,5 +204,5 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }

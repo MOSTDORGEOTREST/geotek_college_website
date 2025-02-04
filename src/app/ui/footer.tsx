@@ -1,4 +1,13 @@
+'use client';
+
+import React, { useContext } from "react";
+import CONTACTS from "../lib/contacts.json";
+import Context from "../context";
+
 export default function Footer() {
+  const context = useContext(Context)
+  const lan: 'ru'|'en' = context.lan
+  
   return (
     <div className="footer section" id="footer">
       <div className="footer__container container grid">
@@ -35,7 +44,7 @@ export default function Footer() {
 
           <ul className="footer__data">
             <li className="footer__information">
-              м. Кропоткинская, Нащокинский пер. 12, стр. 2
+              {CONTACTS[lan].address}
             </li>
             <li className="footer__information">Москва, Россия</li>
           </ul>
