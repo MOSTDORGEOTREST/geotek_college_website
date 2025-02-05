@@ -1,4 +1,6 @@
 
+'use client';
+
 import { useContext } from "react"
 import CONTACTS from "../lib/contacts.json"
 import Context from "../context"
