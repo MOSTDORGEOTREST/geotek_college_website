@@ -1,6 +1,3 @@
-import FileCard from '../../ui/file-card';
-import { mdgtFilesProg2 } from '../../lib/mdgt-files';
-
 export default function Page() {
   return (
     <>
@@ -56,8 +53,9 @@ export default function Page() {
               грунтовых оснований в режиме сверхмалых деформаций; Контроль
               работы грунтового основания в зоне влияния источников
               динамического воздействия) и итоговой аттестации, проходящей в
-              форме зачета. Общая длительность программы – 24 часа (12 часов –
-              лекции, 12 часов – практические занятия).
+              форме зачета. Общая длительность программы – 72 часа (39 часов –
+              лекции, 27 часов – практические занятия, 6 часов - самостоятельные
+              работы).
             </p>
           </div>
           <div className="section__block">
@@ -71,19 +69,6 @@ export default function Page() {
               Для уточнения стоимости, даты и времени проведения программы
               напишите на support@mdgt.ru.
             </p>
-          </div>
-          {/* =================== ФАЙЛЫ ================= */}
-          <div className="files__container">
-            {mdgtFilesProg2.map((file) => {
-              return (
-                <FileCard
-                  key={file.title}
-                  src={file.src}
-                  title={file.title}
-                  back={file.back}
-                />
-              );
-            })}
           </div>
         </div>
       </div>
