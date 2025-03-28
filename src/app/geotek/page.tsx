@@ -117,7 +117,7 @@ export default function Page() {
             <Link href="geotek/prog1" className={styles.types__card}>
               <div className={styles.types__card_title__wrapper}>
                 <h3 className={styles.types__card_title}>
-                  Технология лабораторных определений параметров нелинейных
+                  Технология инструментальных определений входных параметров нелинейных
                   моделей грунтов, используемых в программных комплексах
                   численного моделирования оснований зданий и сооружений
                 </h3>

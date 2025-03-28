@@ -26,7 +26,7 @@ export const pages: {
     path: '/geotek',
     subs: [
       {
-        title: 'Технология лабораторных определений',
+        title: 'Технология инструментальных определений',
         path: '/geotek/prog1',
       },
       {

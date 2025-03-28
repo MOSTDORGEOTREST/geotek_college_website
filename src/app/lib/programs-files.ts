@@ -83,4 +83,8 @@ export const programsFiles: FileItem[] = [
     title: 'Программа ДО подготовка к TOEFL',
     src: '/documents/PROGRAMS/Программа ДО подготовка к TOEFL.pdf',
   },
+  {
+    title: 'Программа подготовка к САЕ',
+    src: '/documents/PROGRAMS/Программа_подготовка_к_САЕ.docm',
+  },
 ];
