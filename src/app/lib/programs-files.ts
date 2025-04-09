@@ -85,6 +85,6 @@ export const programsFiles: FileItem[] = [
   },
   {
     title: 'Программа подготовка к САЕ',
-    src: '/documents/PROGRAMS/Программа_подготовка_к_САЕ.docm',
+    src: '/documents/PROGRAMS/Программа_подготовка_к_САЕ.pdf',
   },
 ];

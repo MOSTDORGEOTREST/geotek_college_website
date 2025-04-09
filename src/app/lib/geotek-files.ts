@@ -100,7 +100,7 @@ export const geotekFiles: FileItem[] = [
   {
     title:
       'ПРИКАЗ об утв.стоим. ДПО 2025',
-    src: '/documents/GEOTEK/ПРИКАЗ об утв.стоим. ДПО 2025.docx',
+    src: '/documents/GEOTEK/ПРИКАЗ об утв.стоим. ДПО 2025.pdf',
   },
   {
     title: 'Программа развития НОЧУ ДПО «Геотэк-Колледж» на 2020-2023 гг.',
