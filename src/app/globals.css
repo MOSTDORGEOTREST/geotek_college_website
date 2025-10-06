@@ -123,6 +123,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--first-color);
 }
 
 img {
@@ -156,6 +157,10 @@ img {
 
 .section__block.center {
   text-align: center;
+}
+
+.section__block h2 {
+   font-size: var(--h2-font-size);
 }
 
 .container {
