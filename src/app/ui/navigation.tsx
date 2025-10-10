@@ -102,7 +102,7 @@ function Navigation() {
                   pathname == page.path ? 'nav__link active-link' : 'nav__link'
                 }
               >
-                <Link href={page.path} onClick={closeMenu}>
+                <Link className="nav__link" href={page.path} onClick={closeMenu}>
                   {page.title}
                 </Link>
               </li>

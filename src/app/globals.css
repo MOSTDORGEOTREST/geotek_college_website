@@ -123,7 +123,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--first-color);
+  color: #3E8CA2;
 }
 
 img {
@@ -1095,6 +1095,7 @@ img {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 2rem;
+    max-width: fit-content;
   }
 
   .nav__toggle,

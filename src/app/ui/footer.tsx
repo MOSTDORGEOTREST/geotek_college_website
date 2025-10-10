@@ -1,13 +1,13 @@
-'use client';
+"use client"
 
-import React, { useContext } from "react";
-import CONTACTS from "../lib/contacts.json";
-import Context from "../context";
+import React, { useContext } from "react"
+import CONTACTS from "../lib/contacts.json"
+import Context from "../context"
 
 export default function Footer() {
   const context = useContext(Context)
-  const lan: 'ru'|'en' = context.lan
-  
+  const lan: "ru" | "en" = context.lan
+
   return (
     <div className="footer section" id="footer">
       <div className="footer__container container grid">
@@ -40,12 +40,20 @@ export default function Footer() {
         </div>
 
         <div className="footer__content">
-          <h3 className="footer__title">Адрес</h3>
+          <h3 className="footer__title">Сведения об образовательной организации</h3>
 
           <ul className="footer__data">
             <li className="footer__information">
-              {CONTACTS[lan].address}
+              <a href="/about">Об организации</a>
             </li>
+          </ul>
+        </div>
+
+        <div className="footer__content">
+          <h3 className="footer__title">Адрес</h3>
+
+          <ul className="footer__data">
+            <li className="footer__information">{CONTACTS[lan].address}</li>
             <li className="footer__information">Москва, Россия</li>
           </ul>
         </div>
@@ -68,8 +76,9 @@ export default function Footer() {
               Понедельник - пятница
               <br />с 10:00 до 19:00
             </li>
-            <li className="footer__information">Суббота с 11:00 до 17:00</li>
-            <li className="footer__information">Воскресенье – выходной</li>
+            <li className="footer__information">
+              Суббота, воскресенье – выходные
+            </li>
           </ul>
         </div>
       </div>
@@ -81,5 +90,5 @@ export default function Footer() {
         <p>&#169; Разработано командой МДГТ</p>
       </div>
     </div>
-  );
+  )
 }
