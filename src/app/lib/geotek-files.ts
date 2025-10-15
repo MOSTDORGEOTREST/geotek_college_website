@@ -7,6 +7,14 @@ export type FileItem = {
 // /documents/GEOTEK/
 
 export const geotekFiles: FileItem[] = [
+  {
+    title: "Устав",
+    src: "/documents/GEOTEK/Устав.pdf",
+  },
+  {
+    title: "Отчет о самообследовании",
+    src: "/documents/GEOTEK/Отчет_о_результатах_самообследования.pdf",
+  },
   // {
   //   title: "Договор на оказание платных образовательных услуг",
   //   src: "/documents/GEOTEK/Договор на оказание платных образовательных услуг.pdf",
@@ -119,13 +127,7 @@ export const geotekFiles: FileItem[] = [
   //   src: "/documents/GEOTEK/Сертификат.PDF",
   // },
   {
-    title: "Устав",
-    src: "/documents/GEOTEK/Устав.pdf",
+    title: "Программа развития",
+    src: "/documents/GEOTEK/ПРОГРАММА РАЗВИТИЯ 2024-2027.pdf",
   },
-  {title: "Отчет о самообследовании",
-    src: "/documents/GEOTEK/Отчет_о_результатах_самообследования.pdf"
-  },
-  {title: "Программа развития",
-    src: "/documents/GEOTEK/ПРОГРАММА РАЗВИТИЯ 2024-2027.pdf"
-  }
 ]
