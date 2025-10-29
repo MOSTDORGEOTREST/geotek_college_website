@@ -22,7 +22,7 @@ export default function Page() {
             );
           })}
         </div>
-        <h3 className="section__title-center">Курсы повышения квалификации</h3>
+        {/* <h3 className="section__title-center">Курсы повышения квалификации</h3>
         <div className="files__container">
           {mdgtFilesProg1.map((file) => {
             return (
@@ -44,7 +44,7 @@ export default function Page() {
               />
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );
