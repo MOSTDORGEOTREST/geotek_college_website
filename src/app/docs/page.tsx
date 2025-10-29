@@ -1,6 +1,5 @@
 'use client';
 
-import { mdgtFilesProg1, mdgtFilesProg2 } from '../lib/mdgt-files';
 import { geotekFiles } from '../lib/geotek-files';
 import FileCard from '../ui/file-card';
 
