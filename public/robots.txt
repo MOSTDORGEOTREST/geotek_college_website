@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://geotekcollege.ru
+
+# Sitemaps
 Sitemap: https://geotekcollege.ru/sitemap.xml
