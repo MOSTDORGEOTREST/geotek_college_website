@@ -15,11 +15,16 @@ log() {
 public_keys_match() {
   cert_pub="$(mktemp)"
   key_pub="$(mktemp)"
-  trap 'rm -f "$cert_pub" "$key_pub"' EXIT
 
-  openssl x509 -pubkey -noout -in "$1" > "$cert_pub"
-  openssl pkey -in "$2" -pubout > "$key_pub"
-  cmp -s "$cert_pub" "$key_pub"
+  if openssl x509 -pubkey -noout -in "$1" > "$cert_pub" &&
+    openssl pkey -in "$2" -pubout > "$key_pub" &&
+    cmp -s "$cert_pub" "$key_pub"; then
+    rm -f "$cert_pub" "$key_pub"
+    return 0
+  fi
+
+  rm -f "$cert_pub" "$key_pub"
+  return 1
 }
 
 validate_pair() {

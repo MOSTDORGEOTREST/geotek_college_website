@@ -28,11 +28,16 @@ public_keys_match() {
   local cert_pub key_pub
   cert_pub="$(mktemp)"
   key_pub="$(mktemp)"
-  trap 'rm -f "$cert_pub" "$key_pub"' RETURN
 
-  openssl x509 -pubkey -noout -in "$1" > "$cert_pub"
-  openssl pkey -in "$2" -pubout > "$key_pub"
-  cmp -s "$cert_pub" "$key_pub"
+  if openssl x509 -pubkey -noout -in "$1" > "$cert_pub" &&
+    openssl pkey -in "$2" -pubout > "$key_pub" &&
+    cmp -s "$cert_pub" "$key_pub"; then
+    rm -f "$cert_pub" "$key_pub"
+    return 0
+  fi
+
+  rm -f "$cert_pub" "$key_pub"
+  return 1
 }
 
 valid_certificate_pair() {
@@ -156,4 +161,6 @@ main() {
   log "ACME initialization finished."
 }
 
-main "$@"
+if [ "${ACME_SOURCE_ONLY:-0}" != "1" ]; then
+  main "$@"
+fi
