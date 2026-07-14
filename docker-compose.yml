@@ -4,6 +4,7 @@ services:
   app:
     image: node:22.12.0
     container_name: nextjs_app
+    user: "0:0"
     working_dir: /usr/src/app
     volumes:
       - .:/usr/src/app
