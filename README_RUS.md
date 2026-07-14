@@ -49,13 +49,13 @@ bun install && bun run build && bun start
 Для обновления docker-compose внутри проекта просто запустите файл Updater.sh от root в корне проекта.
 
 Для ручного обновления Docker без использования Updater:
-1. Соберите приложение:
+1. Создание контейнеров:
 ```bash
-docker-compose run --rm app sh -c "npm install && npm run build"
+docker compose up --force-recreate --build -d 
 ```
-2. Пересоздайте контейнеры:
+2. Обновление контейнера
 ```bash
-docker-compose up --force-recreate --build -d
+docker compose up --force-recreate -d app
 ```
 
 Этот проект использует [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) для автоматической оптимизации и загрузки [Geist](https://vercel.com/font), нового семейства шрифтов для Vercel.
