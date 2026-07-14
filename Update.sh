@@ -32,17 +32,18 @@ if ! execute_command "git pull"; then
     execute_command "git pull" || { echo "Ошибка: Git pull не удался даже после git stash"; exit 1; }
 fi
 
-# Шаг 2: Компиляция Next.js через Docker Compose
-echo "Шаг 2: Выполняем компиляцию Next.js..."
-execute_command "docker-compose run --rm app sh -c 'npm install && npm run build'" || {
-    echo "Ошибка: Компиляция Next.js завершилась неудачей";
+
+
+
+echo "Шаг 3: Проверяем и инициализируем ACME сертификаты..."
+execute_command "bash scripts/acme-init.sh" || {
+    echo "Ошибка: Не удалось инициализировать ACME сертификаты";
     exit 1;
 }
 
-
-
-execute_command "docker-compose up --force-recreate --build -d" || {
-    echo "Ошибка: Не удалось запустить временный контейнер";
+echo "Шаг 4: Запускаем контейнеры..."
+execute_command "docker compose up --force-recreate --build -d" || {
+    echo "Ошибка: Не удалось запустить контейнеры";
     exit 1;
 }
 
