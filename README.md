@@ -54,7 +54,11 @@ sudo bash Updater.sh
 ### For manual Docker update without using Updater:
 1. Сreate containers:
 ```bash
-docker compose up --force-recreate --build -d app
+docker compose up --force-recreate --build -d
+```
+2. Update container main:
+```bash
+docker compose up --force-recreate -d app
 ```
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

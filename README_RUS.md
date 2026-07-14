@@ -51,7 +51,11 @@ bun install && bun run build && bun start
 Для ручного обновления Docker без использования Updater:
 1. Создание контейнеров:
 ```bash
-docker compose up --force-recreate --build -d app
+docker compose up --force-recreate --build -d 
+```
+2. Обновление контейнера
+```bash
+docker compose up --force-recreate -d app
 ```
 
 Этот проект использует [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) для автоматической оптимизации и загрузки [Geist](https://vercel.com/font), нового семейства шрифтов для Vercel.
